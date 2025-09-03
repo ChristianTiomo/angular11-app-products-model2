@@ -1,0 +1,108 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Computer",
+      "price": 875,
+      "quantity": 5,
+      "selected": false,
+      "available": true
+    },
+    {
+      "id": "2",
+      "name": "Printer",
+      "price": 125,
+      "quantity": 12,
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": "3",
+      "name": "SmartPhone",
+      "price": 530,
+      "quantity": 7,
+      "selected": false,
+      "available": false
+    },
+    {
+      "id": "4",
+      "name": "Mouse",
+      "price": 40,
+      "quantity": 9,
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": "5",
+      "name": "USB-Keys",
+      "price": 65,
+      "quantity": 17,
+      "selected": false,
+      "available": false
+    },
+    {
+      "id": "6",
+      "name": "Hard Disk",
+      "price": 85,
+      "quantity": 15,
+      "selected": false,
+      "available": true
+    },
+    {
+      "id": "7",
+      "name": "Keyboard",
+      "price": 60,
+      "quantity": 21,
+      "selected": true,
+      "available": false
+    },
+    {
+      "id": "8",
+      "name": "TV 55''",
+      "price": "1325",
+      "quantity": "14",
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": "9",
+      "name": "Mire",
+      "price": "25",
+      "quantity": "13",
+      "selected": true,
+      "available": false
+    },
+    {
+      "id": "10",
+      "name": "Steve",
+      "price": "45",
+      "quantity": "55",
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": "12",
+      "name": "momo",
+      "price": "5",
+      "quantity": "45",
+      "selected": true,
+      "available": true
+    },
+    {
+      "name": "Vanelle",
+      "price": "65",
+      "quantity": "2",
+      "selected": false,
+      "available": true,
+      "id": "13"
+    },
+    {
+      "id": "14",
+      "name": "Lamondiale",
+      "price": "250",
+      "quantity": "14445445",
+      "selected": true,
+      "available": true
+    }
+  ]
+}

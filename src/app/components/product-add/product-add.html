@@ -1,0 +1,55 @@
+<div class="container" *ngIf="productFormGroup">
+  <!-- {{productFormGroup.value | json}} -->
+  <form [formGroup]="productFormGroup" (ngSubmit)="onSaveProduct()">
+
+    <div class="form-group">
+      <label>Name</label>
+      <!-- {{productFormGroup.value.name}} -->
+      <input type="text" formControlName="name"
+             [ngClass]="{'is-invalid': submitted && productFormGroup.get('name')?.errors}">
+      <div *ngIf="submitted && productFormGroup.get('name')?.errors" class="invalid-feedback">
+        <div *ngIf="productFormGroup.get('name')?.errors?.['required']">
+          Name is Required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Price</label>
+      <input type="text" formControlName="price"
+             [ngClass]="{'is-invalid': submitted && productFormGroup.get('price')?.errors}">
+      <div *ngIf="submitted && productFormGroup.get('price')?.errors" class="invalid-feedback">
+        <div *ngIf="productFormGroup.get('price')?.errors?.['required']">
+          Price is Required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Quantity</label>
+      <input type="text" formControlName="quantity"
+             [ngClass]="{'is-invalid': submitted && productFormGroup.get('quantity')?.errors}">
+      <div *ngIf="submitted && productFormGroup.get('quantity')?.errors" class="invalid-feedback">
+        <div *ngIf="productFormGroup.get('quantity')?.errors?.['required']">
+          Quantity is Required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Selected</label>
+      <input type="checkbox" formControlName="selected" class="form-check">
+    </div>
+    <div class="form-group">
+      <label>Available</label>
+      <input type="checkbox" formControlName="available" class="form-check">
+    </div>
+   <!-- <button class="btn btn-success" (click)=onSaveProduct()>Save</button>-->
+    <div class="d-flex justify-content-end">
+      <button type="reset" class="btn btn-outline-secondary me-2 px-4" (click)="cancel()">Cancel</button>
+      <button type="submit" class="btn btn-success px-4" >
+        <i class="bi bi-save me-1"></i> Save
+      </button>
+    </div>
+  </form>
+</div>
