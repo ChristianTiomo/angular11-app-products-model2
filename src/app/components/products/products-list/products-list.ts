@@ -51,7 +51,7 @@ export class ProductsListComponent implements OnInit{
         .subscribe(data=>{
           this.onGetAllProducts();
         })
-    this.router.navigateByUrl("/home")
+    this.router.navigateByUrl("/products")
   }
 
   onUpdateProduct(p: ProductModel){

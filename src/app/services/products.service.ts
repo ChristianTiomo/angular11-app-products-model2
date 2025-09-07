@@ -29,7 +29,8 @@ export class ProductsService {
 
   searchProducts(keyword: string): Observable<ProductModel[]> {
     const params = new HttpParams().set('name_like', (keyword || '').trim());
-    return this.http.get<ProductModel[]>(`${this.host}/products`, { params });
+    //return this.http.get<ProductModel[]>(`${this.host}/products`, { params });
+    return this.http.get<ProductModel[]>(this.host + "/products?name_like="+keyword);
   }
 
   selectProduct(product:ProductModel): Observable<ProductModel>{

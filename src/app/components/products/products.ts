@@ -19,7 +19,9 @@ export class ProductsComponent implements OnInit{
   constructor(private productsService : ProductsService,
               private router : Router) {}
 
-   ngOnInit(): void {}
+   ngOnInit(): void {
+    this.onGetAllProducts();
+   }
 
   onGetAllProducts() {
     this.products$= this.productsService.getAllProducts().pipe(
@@ -46,7 +48,7 @@ export class ProductsComponent implements OnInit{
   }
 
   onSearchProducts(dataForm: any) {
-    this.products$= this.productsService.searchProducts(dataForm).pipe(
+    this.products$= this.productsService.searchProducts(dataForm.keyword).pipe(
       map(data=>({dataState: DataStateEnum.LOADED, data:data})),
       startWith({dataState:DataStateEnum.LOADING}),
       catchError(err=>of({dataState:DataStateEnum.ERROR, errorMessage: err.message}))

@@ -95,14 +95,6 @@
       "selected": false,
       "available": true,
       "id": "13"
-    },
-    {
-      "id": "14",
-      "name": "Lamondiale",
-      "price": "250",
-      "quantity": "14445445",
-      "selected": true,
-      "available": true
     }
   ]
 }
